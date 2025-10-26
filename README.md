@@ -67,6 +67,7 @@ Desenvolvido por José Fernandes Queiroz
 💼 GitHub @queirozfernando
 
 📧 Contato profissional disponível sob solicitação
+    📞 [WhatsApp: (51) 98219-9988](https://wa.me/5551982199988)
 
 🛡️ Licença
 
