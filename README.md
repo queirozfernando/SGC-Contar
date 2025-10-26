@@ -39,4 +39,35 @@
 ---
 
 ## 🧱 Estrutura do Projeto
+SGC-Contar/
+│
+├── app/
+│ ├── src/main/java/com/example/myapplication/
+│ │ ├── ui/ → Telas Jetpack Compose
+│ │ ├── data/local/ → Entidades, DAOs e AppDb (Room)
+│ │ ├── di/ → Módulos Hilt (DbModule, etc.)
+│ │ ├── InventoryApp.kt → Classe Application
+│ │ └── ...
+│ ├── build.gradle.kts → Configuração do módulo App
+│ └── proguard-rules.pro
+│
+├── gradle/
+│ └── libs.versions.toml → Catálogo centralizado de versões
+│
+├── build.gradle.kts → Configuração raiz do projeto
+├── settings.gradle.kts → Definição de repositórios
+└── gradle.properties → Parâmetros de compilação
 
+🧠 Autor
+
+Desenvolvido por José Fernandes Queiroz
+💼 GitHub @queirozfernando
+
+📧 Contato profissional disponível sob solicitação
+
+🛡️ Licença
+
+Este projeto está licenciado sob a MIT License — veja o arquivo LICENSE
+ para mais detalhes.
+
+💬 Projeto em desenvolvimento ativo — parte do ecossistema SGC Sistemas, voltado à automação comercial, controle de estoque e integração fiscal.
