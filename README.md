@@ -39,24 +39,27 @@
 ---
 
 ## 🧱 Estrutura do Projeto
+
+```plaintext
 SGC-Contar/
 │
 ├── app/
-│ ├── src/main/java/com/example/myapplication/
-│ │ ├── ui/ → Telas Jetpack Compose
-│ │ ├── data/local/ → Entidades, DAOs e AppDb (Room)
-│ │ ├── di/ → Módulos Hilt (DbModule, etc.)
-│ │ ├── InventoryApp.kt → Classe Application
-│ │ └── ...
-│ ├── build.gradle.kts → Configuração do módulo App
-│ └── proguard-rules.pro
+│   ├── src/main/java/com/example/myapplication/
+│   │   ├── ui/                  → Telas Jetpack Compose
+│   │   ├── data/local/          → Entidades, DAOs e AppDb (Room)
+│   │   ├── di/                  → Módulos Hilt (DbModule, etc.)
+│   │   ├── InventoryApp.kt      → Classe Application
+│   │   └── ...
+│   ├── build.gradle.kts         → Configuração do módulo App
+│   └── proguard-rules.pro
 │
 ├── gradle/
-│ └── libs.versions.toml → Catálogo centralizado de versões
+│   └── libs.versions.toml       → Catálogo centralizado de versões
 │
-├── build.gradle.kts → Configuração raiz do projeto
-├── settings.gradle.kts → Definição de repositórios
-└── gradle.properties → Parâmetros de compilação
+├── build.gradle.kts             → Configuração raiz do projeto
+├── settings.gradle.kts          → Definição de repositórios
+└── gradle.properties            → Parâmetros de compilação
+
 
 🧠 Autor
 
