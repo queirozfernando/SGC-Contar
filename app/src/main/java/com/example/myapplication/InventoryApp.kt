@@ -15,7 +15,8 @@ class InventoryApp : Application() {
             AppDb::class.java,
             "inventory.db"
         )
-            .fallbackToDestructiveMigration() // em produção, usar migrações
+            // 🔧 Atualizado conforme nova API do Room
+            .fallbackToDestructiveMigration(true)
             .build()
     }
 }

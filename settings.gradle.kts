@@ -6,11 +6,11 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
     }
 }
-rootProject.name = "sgc"
-include(":app")
+
+rootProject.name = "SGC-Contar"
+include(":app", ":sgc")   // <-- ajuste se as pastas tiverem outros nomes

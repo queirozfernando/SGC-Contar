@@ -30,9 +30,7 @@ android {
         debug { isMinifyEnabled = false }
     }
 
-    buildFeatures { compose = true }
-    // ❌ sem composeOptions (plugin Compose já cuida)
-
+    buildFeatures { compose = true }        // plugin compose já cuida do K2
     packaging { resources { excludes += "/META-INF/{AL2.0,LGPL2.1}" } }
 
     compileOptions {
@@ -50,49 +48,43 @@ ksp {
 }
 
 dependencies {
-    // ---- Compose BOM: controla as versões do ecossistema Compose ----
-    implementation(platform("androidx.compose:compose-bom:2024.10.00"))
+    // Compose (controlado pela BOM)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.icons)
+    implementation(libs.androidx.navigation.compose)
+    debugImplementation(libs.androidx.compose.ui.tooling)
 
-    // Compose UI/Material (sem versões individuais)
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.material:material-icons-extended")
-    debugImplementation("androidx.compose.ui:ui-tooling")
+    // Room
+        implementation(libs.androidx.room.ktx)
+        ksp(libs.androidx.room.compiler)
 
-    // Activity Compose (suba para a mais nova estável da sua stack quando possível)
-    implementation("androidx.activity:activity-compose:1.11.0")
-
-    // Navigation
-    implementation("androidx.navigation:navigation-compose:2.8.3")
-
-    // Hilt + Room
-    implementation("com.google.dagger:hilt-android:2.52")
-    ksp("com.google.dagger:hilt-compiler:2.52")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
-    implementation("androidx.room:room-ktx:2.6.1")
-    ksp("androidx.room:room-compiler:2.6.1")
+    // Hilt
+        implementation(libs.androidx.hilt.android)
+        ksp(libs.hilt.compiler)
+        implementation(libs.androidx.hilt.navigation.compose)
 
     // WorkManager
-    implementation("androidx.work:work-runtime-ktx:2.9.1")
+    implementation(libs.androidx.work.runtime.ktx)
 
     // Retrofit / OkHttp / Moshi
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation("com.squareup.retrofit2:converter-moshi:2.11.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.14")
-    implementation("com.squareup.moshi:moshi-kotlin:1.15.1")
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.moshi)
+    implementation(libs.okhttp.logging)
+    implementation(libs.moshi.kotlin)
 
-    // CameraX (unificado)
-    implementation("androidx.camera:camera-core:1.3.4")
-    implementation("androidx.camera:camera-camera2:1.3.4")
-    implementation("androidx.camera:camera-lifecycle:1.3.4")
-    implementation("androidx.camera:camera-view:1.3.4")
-
-    // ML Kit
-    implementation("com.google.mlkit:barcode-scanning:17.3.0")
+    // CameraX + ML Kit
+    implementation(libs.androidx.camerax.core)
+    implementation(libs.androidx.camerax.camera2)
+    implementation(libs.androidx.camerax.lifecycle)
+    implementation(libs.androidx.camerax.view)
+    implementation(libs.mlkit.barcode)
 
     // Security + Coroutines
-    implementation("androidx.security:security-crypto:1.1.0-alpha06")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+    implementation(libs.androidx.security.crypto)
+    implementation(libs.kotlinx.coroutines.android)
 }
