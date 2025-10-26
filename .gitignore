@@ -1,15 +1,46 @@
+# === Android / Kotlin ===
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+*.apk
+*.ap_
+*.aab
+*.hprof
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
 local.properties
+
+# KSP / Annotation processors
+ksp/
+build/generated/
+
+# IDE (Android Studio / IntelliJ)
+.idea/
+.idea/*
+!.idea/codeStyles/
+!.idea/runConfigurations/
+!.idea/inspectionProfiles/
+
+# Local IDE configs
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Captures / test output
+captures/
+outputs/
+.externalNativeBuild/
+.cxx/
+
+# OS / misc
+.DS_Store
+Thumbs.db
+
+# Log / temp
+*.log
+*.tmp
+*.lock
