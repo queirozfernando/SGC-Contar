@@ -77,4 +77,5 @@ Desenvolvido por José Fernandes Queiroz
 Este projeto está licenciado sob a MIT License — veja o arquivo LICENSE
  para mais detalhes.
 
-💬 Projeto em desenvolvimento ativo — parte do ecossistema SGC Sistemas, voltado à automação comercial, controle de estoque e integração fiscal.
+💬 Projeto em desenvolvimento ativo — parte do ecossistema SGC Sistemas,
+voltado à automação comercial, controle de estoque e integração fiscal.
