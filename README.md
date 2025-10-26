@@ -66,6 +66,8 @@ SGC-Contar/
 Desenvolvido por José Fernandes Queiroz
 💼 GitHub @queirozfernando
 
+📞 WhatsApp: (51) 98219-9988
+
 📲 **Contato:**  
 ➡️ WhatsApp: [ (51) 98219-9988 ](https://wa.me/5551982199988)
 
