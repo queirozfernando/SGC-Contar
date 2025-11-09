@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Permite HTTP claro globalmente (útil em dev) -->
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Emulador Android acessando o host da máquina -->
+        <domain includeSubdomains="false">10.0.2.2</domain>
+
+        <!-- PC/Servidor na LAN (IP atual do backend) -->
+        <domain includeSubdomains="false">192.168.15.11</domain>
+
+        <!-- Domínios DynDNS que você usa para o banco/backend -->
+        <domain includeSubdomains="true">amadeu.myftp.org</domain>
+        <domain includeSubdomains="true">sgcsistemas.myftp.org</domain>
+    </domain-config>
+</network-security-config>
